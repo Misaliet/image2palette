@@ -14,6 +14,8 @@ def extract_color(path, tolerance, limit):
     df_rgb = []
     colors = extcolors.extract_from_path(path, tolerance, limit)
     colors_pre_list = str(colors).replace('([(','').split(', (')[0:-1]
+    print(colors_pre_list)
+    # assert 1==0
     df_rgb = [i.split('), ')[0] + ')' for i in colors_pre_list]
     # make sure
     while len(df_rgb) < limit-1:
@@ -44,6 +46,8 @@ def save_palette(rgb_list, percent_list, img_size, limit, path):
             tgt[i*patch_size:(i+1)*patch_size, j*patch_size:(j+1)*patch_size, 2] = int(rgb_list[k][1:-1].split(',')[2])
             k += 1
 
+    # change rgb to bgr for opencv saving.
+    tgt = tgt[:, :, [2,1,0]]
     cv2.imwrite(path, tgt)
 
 def main(args):
