@@ -7,9 +7,11 @@ The core code for extracting image color is done by [extcolors python library](h
 
 ## Examples:
 Given this image as input:
+
 <img src='./0001.png'/>
 
 We can get output like this (3x3 grid):
+
 <img src='./output_9.png'/>
 
 
