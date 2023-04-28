@@ -3,7 +3,7 @@
 This project is used for translate 1 image to its
 own palette.
 
-The core code for extract image color is done by [extcolors python library](https://github.com/CairX/extract-colors-py).
+The core code for extracting image color is done by [extcolors python library](https://github.com/CairX/extract-colors-py).
 
 ## Examples:
 Given this image as input:
