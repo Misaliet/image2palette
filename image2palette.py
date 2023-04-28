@@ -49,7 +49,7 @@ def save_palette(rgb_list, percent_list, img_size, limit, path):
 def main(args):
     input_path = args[0]
     output_path = args[1]
-    tolerance = 0
+    tolerance = 5
     limit = 17
     if len(args) > 2:
         tolerance = int(args[2])
